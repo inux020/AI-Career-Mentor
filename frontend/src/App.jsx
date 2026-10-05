@@ -9,7 +9,6 @@ import LearningRoadmap from "./pages/LearningRoadmap";
 import Profile from "./pages/Profile";
 import Assessment from "./pages/Assessment";
 import NotFound from "./pages/NotFound";
-import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./context/AuthContext";
 
@@ -17,8 +16,7 @@ export default function App() {
   return (
     <AuthProvider>
       <div className="app-shell">
-        <Navbar />
-        <main className="page-container">
+        <main className="page-container no-nav-layout">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/assessment" element={<Assessment />} />
